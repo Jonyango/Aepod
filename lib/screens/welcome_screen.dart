@@ -13,12 +13,20 @@ class WelcomeScreen extends StatelessWidget {
             Align(
               alignment: Alignment.topLeft,
               child: Padding(
-                padding: EdgeInsets.only(left: 12.0, top:45.0),
+                padding: EdgeInsets.only(left: 12.0, top: 45.0),
                 child: SvgPicture.asset('assets/images/icon.svg',
                     color: Colors.white),
               ),
             ),
-            SvgPicture.asset('assets/images/Ellipse 1 (Stroke).svg'),
+            Positioned(
+              top: -170,
+              child: SvgPicture.asset('assets/images/Ellipse 1 (Stroke).svg',)),
+            Positioned(
+              top: 90,
+              child: SvgPicture.asset('assets/images/Ellipse 2 (Stroke).svg')),
+            Positioned(
+              top: 370,
+              child: SvgPicture.asset('assets/images/Ellipse 3 (Stroke).svg')),
             Positioned(
               top: 280,
               left: 20,
@@ -28,8 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     letterSpacing: 0.2,
-                    fontSize: 25.0
-                    ),
+                    fontSize: 25.0),
               ),
             ),
             Positioned(
@@ -43,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Positioned(
               top: 440,
-              left:20,
+              left: 20,
               child: Button(
                 buttonName: 'Register',
                 backgroundColor: Colors.white,
@@ -52,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Positioned(
               top: 500,
-              left:20,
+              left: 20,
               child: Button(
                 buttonName: 'Login',
                 backgroundColor: Colors.transparent,
