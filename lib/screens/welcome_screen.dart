@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:aepod/components/components.dart';
+import 'package:aepod/constants/index.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff0C9359),
+      backgroundColor: kThemeColor,
       body: SafeArea(
         child: Center(
           child: Stack(children: [
@@ -15,7 +17,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(left: 12.0, top: 45.0),
                 child: SvgPicture.asset('assets/images/icon.svg',
-                    color: Colors.white),
+                    color: kTextColor),
               ),
             ),
             Positioned(
@@ -32,11 +34,7 @@ class WelcomeScreen extends StatelessWidget {
               left: 20,
               child: Text(
                 'Welcome to Aepod',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    letterSpacing: 0.2,
-                    fontSize: 25.0),
+                style: kTitleTextStyle,
               ),
             ),
             Positioned(
@@ -44,8 +42,7 @@ class WelcomeScreen extends StatelessWidget {
               left: 20,
               child: Text(
                 'Grow plants easily from your home with our \n award winning pods',
-                style:
-                    TextStyle(fontWeight: FontWeight.w300, color: Colors.white),
+                style:kTextStyle,
               ),
             ),
             Positioned(
@@ -53,8 +50,8 @@ class WelcomeScreen extends StatelessWidget {
               left: 20,
               child: Button(
                 buttonName: 'Register',
-                backgroundColor: Colors.white,
-                textColor: Color(0xff0C9359),
+                backgroundColor: kTextColor,
+                textColor: kThemeColor,
               ),
             ),
             Positioned(
@@ -63,7 +60,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Button(
                 buttonName: 'Login',
                 backgroundColor: Colors.transparent,
-                textColor: Colors.white,
+                textColor: kTextColor,
               ),
             ),
           ]),
