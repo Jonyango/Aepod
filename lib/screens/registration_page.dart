@@ -34,6 +34,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     'or Register using social media',
                     style: kTextStyle,
                     ),
+                  SocialMediaButtons(),
                   Button(
                     buttonName: 'Register',
                     backgroundColor: kTextColor,
