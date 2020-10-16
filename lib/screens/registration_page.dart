@@ -42,13 +42,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
               Expanded(
                 child: FormComponent(),
               ),
+              SizedBox(height:25.0),
               Text(
                 'or Register using social media',
                 textAlign: TextAlign.left,
                 style: kTextStyle,
               ),
               SizedBox(
-                height: 25.0,
+                height: 20.0,
               ),
               SocialMediaButtons(),
               Spacer(),
@@ -62,7 +63,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               ),
               Center(
                 child: Text(
-                  'Already have an account? login',
+                  'Already have an account? Login',
                   style: TextStyle(
                     color: kTextColor,
                     fontWeight: FontWeight.w500,

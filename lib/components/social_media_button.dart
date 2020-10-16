@@ -24,12 +24,17 @@ class SocialMediaButtons extends StatelessWidget {
                   onPressed: null,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Icon(Icons.face),
+                      SizedBox(
+                        width: 20.0,
+                      ),
                       Text(
                         'Facebook',
-                        style: kTextStyle,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: kTextColor,
+                        ),
                       ),
                     ],
                   ),
@@ -53,12 +58,17 @@ class SocialMediaButtons extends StatelessWidget {
                   onPressed: null,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Icon(Icons.ac_unit),
+                      SizedBox(
+                        width: 20.0,
+                      ),
                       Text(
                         'Google',
-                        style: kTextStyle,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: kTextColor,
+                        ),
                       ),
                     ],
                   ),
