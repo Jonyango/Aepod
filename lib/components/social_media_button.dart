@@ -8,7 +8,7 @@ class SocialMediaButtons extends StatelessWidget {
     return Container(
       child: Row(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Expanded(
               child: Container(
@@ -24,6 +24,7 @@ class SocialMediaButtons extends StatelessWidget {
                   onPressed: null,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Icon(Icons.face),
                       Text(
@@ -35,7 +36,9 @@ class SocialMediaButtons extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 15.0,),
+            SizedBox(
+              width: 15.0,
+            ),
             Expanded(
               child: Container(
                 width: 170,
@@ -50,6 +53,7 @@ class SocialMediaButtons extends StatelessWidget {
                   onPressed: null,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Icon(Icons.ac_unit),
                       Text(

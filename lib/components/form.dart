@@ -20,21 +20,21 @@ class _FormComponentState extends State<FormComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRect(
+    return SingleChildScrollView(
+      physics: NeverScrollableScrollPhysics(),
       child: Form(
         key: _formKey,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
           FormField(
-            label: 'Email',
+            label: 'Email Address',
             controller: _emailTextEditingController,
-            iconData: Icons.alternate_email,
+            iconData: Icons.email,
           ),
           FormField(
-              label: 'Password',
-              controller: _passwordTextEditingController,
-              iconData: Icons.lock)
+            label: 'Password',
+            controller: _passwordTextEditingController,
+            iconData: Icons.lock,
+          ),
         ]),
       ),
     );
@@ -61,12 +61,12 @@ class FormField extends StatelessWidget {
         children: [
           Icon(
             iconData,
-            color: Colors.transparent,
+            color: kTextColor,
           ),
           Expanded(
             child: TextFormField(
               controller: controller,
-              keyboardType: label == 'Email'
+              keyboardType: label == 'Email Address'
                   ? TextInputType.emailAddress
                   : TextInputType.visiblePassword,
               decoration: InputDecoration(

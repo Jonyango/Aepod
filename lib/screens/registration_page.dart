@@ -22,12 +22,11 @@ class _RegistrationPageState extends State<RegistrationPage> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 14.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+            padding: EdgeInsets.symmetric(horizontal: 18.0),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Padding(
-                padding: EdgeInsets.only(top:28.0),
+                padding: EdgeInsets.only(top: 38.0),
                 child: Text(
                   'Register on Aepod',
                   style: kTitleTextStyle,
@@ -36,7 +35,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               Container(
                 margin: EdgeInsets.only(bottom: 25.0, top: 18.0),
                 child: Text(
-                  "Create an Aepod Acoount. We can't wait to \n have you",
+                  "Create an Aepod Acoount. We can't wait to \nhave you",
                   style: kTextStyle,
                 ),
               ),
@@ -48,11 +47,18 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 textAlign: TextAlign.left,
                 style: kTextStyle,
               ),
+              SizedBox(
+                height: 25.0,
+              ),
               SocialMediaButtons(),
+              Spacer(),
               Button(
                 buttonName: 'Register',
                 backgroundColor: kTextColor,
                 textColor: kThemeColor,
+              ),
+              SizedBox(
+                height: 25.0,
               ),
               Center(
                 child: Text(
@@ -62,7 +68,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-              )
+              ),
+              SizedBox(height: 40.0,),
             ]),
           ),
         ),
