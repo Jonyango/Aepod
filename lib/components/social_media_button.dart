@@ -8,46 +8,56 @@ class SocialMediaButtons extends StatelessWidget {
     return Container(
       child: Row(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              width: 200,
-              height: 50,
-              decoration: BoxDecoration(),
-              child: FlatButton(
-                onPressed: null,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.face),
-                    Text(
-                      'Facebook',
-                      style: kTextStyle,
-                    ),
-                  ],
+            Expanded(
+              child: Container(
+                width: 170,
+                height: 50,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: kTextColor,
+                  ),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: FlatButton(
+                  onPressed: null,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.face),
+                      Text(
+                        'Facebook',
+                        style: kTextStyle,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-            Container(
-              width: 200,
-              height: 50,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: kTextColor,
+            SizedBox(width: 15.0,),
+            Expanded(
+              child: Container(
+                width: 170,
+                height: 50,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: kTextColor,
+                  ),
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              child: FlatButton(
-                onPressed: null,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.ac_unit),
-                    Text(
-                      'Google',
-                      style: kTextStyle,
-                    ),
-                  ],
+                child: FlatButton(
+                  onPressed: null,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.ac_unit),
+                      Text(
+                        'Google',
+                        style: kTextStyle,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
