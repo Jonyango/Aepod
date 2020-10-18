@@ -23,7 +23,7 @@ class PersonalizeExperience extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 25.0, top: 18.0),
+                margin: EdgeInsets.only(bottom: 25.0, top: 25.0),
                 child: Text(
                   "What can we call you? Could be your name, \na nickname or something funny ☺️.",
                   style: kTextStyle,
@@ -36,7 +36,7 @@ class PersonalizeExperience extends StatelessWidget {
                 backgroundColor: kTextColor,
                 textColor: kThemeColor,
               ),
-              SizedBox(height:30.0),
+              SizedBox(height:40.0),
             ],
           ),
         ),

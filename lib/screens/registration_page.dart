@@ -23,55 +23,59 @@ class _RegistrationPageState extends State<RegistrationPage> {
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 18.0),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Padding(
-                padding: EdgeInsets.only(top: 38.0),
-                child: Text(
-                  'Register on Aepod',
-                  style: kTitleTextStyle,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 25.0, top: 18.0),
-                child: Text(
-                  "Create an Aepod Acoount. We can't wait to \nhave you",
-                  style: kTextStyle,
-                ),
-              ),
-              Expanded(
-                child: FormComponent(),
-              ),
-              SizedBox(height:25.0),
-              Text(
-                'or Register using social media',
-                textAlign: TextAlign.left,
-                style: kTextStyle,
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              SocialMediaButtons(),
-              Spacer(),
-              Button(
-                buttonName: 'Register',
-                backgroundColor: kTextColor,
-                textColor: kThemeColor,
-              ),
-              SizedBox(
-                height: 25.0,
-              ),
-              Center(
-                child: Text(
-                  'Already have an account? Login',
-                  style: TextStyle(
-                    color: kTextColor,
-                    fontWeight: FontWeight.w500,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(top: 38.0),
+                  child: Text(
+                    'Register on Aepod',
+                    style: kTitleTextStyle,
                   ),
                 ),
-              ),
-              SizedBox(height: 40.0,),
-            ]),
+                Container(
+                  margin: EdgeInsets.only(bottom: 25.0, top: 18.0),
+                  child: Text(
+                    "Create an Aepod Acoount. We can't wait to \nhave you",
+                    style: kTextStyle,
+                  ),
+                ),
+                Expanded(
+                  child: FormComponent(),
+                ),
+                SizedBox(height: 25.0),
+                Text(
+                  'or Register using social media',
+                  textAlign: TextAlign.left,
+                  style: kTextStyle,
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                SocialMediaButtons(),
+                Spacer(),
+                Button(
+                  buttonName: 'Register',
+                  backgroundColor: kTextColor,
+                  textColor: kThemeColor,
+                ),
+                SizedBox(
+                  height: 25.0,
+                ),
+                Center(
+                  child: Text(
+                    'Already have an account? Login',
+                    style: TextStyle(
+                      color: kTextColor,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40.0,
+                ),
+              ],
+            ),
           ),
         ),
       ),
