@@ -1,5 +1,5 @@
-import 'package:aepod/constants/index.dart';
 import 'package:flutter/material.dart';
+import 'package:aepod/components/form_field.dart';
 
 class FormComponent extends StatefulWidget {
   @override
@@ -25,12 +25,12 @@ class _FormComponentState extends State<FormComponent> {
       child: Form(
         key: _formKey,
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          FormField(
+          FormFieldText(
             label: 'Email Address',
             controller: _emailTextEditingController,
             iconData: Icons.email,
           ),
-          FormField(
+          FormFieldText(
             label: 'Password',
             controller: _passwordTextEditingController,
             iconData: Icons.lock,
@@ -41,46 +41,3 @@ class _FormComponentState extends State<FormComponent> {
   }
 }
 
-class FormField extends StatelessWidget {
-  final String label;
-  final TextEditingController controller;
-  final IconData iconData;
-
-  FormField({this.label, this.controller, this.iconData});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: kTextColor, width: 0.5),
-        ),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(
-            iconData,
-            color: kTextColor,
-          ),
-          Expanded(
-            child: TextFormField(
-              controller: controller,
-              keyboardType: label == 'Email Address'
-                  ? TextInputType.emailAddress
-                  : TextInputType.visiblePassword,
-              decoration: InputDecoration(
-                labelText: label,
-                labelStyle: TextStyle(
-                    fontWeight: FontWeight.w200,
-                    letterSpacing: 0.05,
-                    color: kTextColor),
-                border: OutlineInputBorder(borderSide: BorderSide.none),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

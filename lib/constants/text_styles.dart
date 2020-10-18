@@ -8,3 +8,6 @@ const kTitleTextStyle = TextStyle(
     color: kTextColor,
     letterSpacing: 0.2,
     fontSize: 25.0);
+
+const kInputStyle = TextStyle(
+    fontWeight: FontWeight.w200, letterSpacing: 0.05, color: kTextColor);
