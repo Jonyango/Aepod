@@ -18,7 +18,7 @@ class AepodContainer extends StatelessWidget {
         color: Color(0xff25AC73),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
             child: Row(
@@ -41,7 +41,8 @@ class AepodContainer extends StatelessWidget {
               ],
             ),
           ),
-          Text(aepodId,
+          Text(
+            aepodId,
               style: TextStyle(
                 fontWeight: FontWeight.w200,
                 color: kTextColor,
